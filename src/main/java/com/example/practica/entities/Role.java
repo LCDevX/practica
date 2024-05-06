@@ -19,19 +19,19 @@ import java.util.List;
 public class Role implements Serializable {
 
 
-     @Id
-    @Column ( name = "id", nullable = false)
-        private  Long Id;
-    @Column (name =  "name", length = 40)
-        private  String name ;
-    @Column (name = "abbreviation", length = 4)
-        private  String abbreviation;
-    @Column (name =  "description")
-        private  String description;
-    @Column (name = "state",columnDefinition = "boolean default false")
-        private  Boolean state;
-@ManyToMany (mappedBy = "listroles",cascade = CascadeType.PERSIST)
-    private List<User> users;
+         @Id
+        @Column ( name = "id", nullable = false)
+            private  Long Id;
+        @Column (name =  "name", length = 40)
+            private  String name ;
+        @Column (name = "abbreviation", length = 4)
+            private  String abbreviation;
+        @Column (name =  "description")
+            private  String description;
+        @Column (name = "state",columnDefinition = "boolean default false")
+            private  Boolean state;
+    @ManyToMany (mappedBy = "listroles",cascade = CascadeType.PERSIST)
+        private List<User> users;
 
 
 }
